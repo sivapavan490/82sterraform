@@ -1,0 +1,14 @@
+1. 
+
+which terraform
+
+for using above cmd it will show the path of the terraform
+
+2.
+    aws configure
+
+3. terraform init
+
+4. terraform plan
+
+5. terraform apply -auto-approve
