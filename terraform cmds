@@ -12,3 +12,7 @@ for using above cmd it will show the path of the terraform
 4. terraform plan
 
 5. terraform apply -auto-approve
+
+6. terraform validate  ---> it will validate the code.
+
+7. terraform fmt ---> it will put the spacing in neat format.
