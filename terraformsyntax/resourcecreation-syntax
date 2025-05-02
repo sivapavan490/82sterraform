@@ -6,7 +6,10 @@ resource "type-of-resource"   "name-of-resource"{
 
 ex:-
 
-
+# output syntax:-
+  output "name"{
+    value= type_of_resource.name_of_resource
+  }
 # INSTANCE CREATION RESOURCE EXAMPLE
 resource "aws_instance" "web" {
   ami           = "resolve:ssm:/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64"
@@ -59,6 +62,8 @@ variable "variable name"{
 
   expression ? " this runs if true " : " this runs if false"
     # ex:- var.environment == "prod" ? "t2.micro" :"t3.small" 
+
+
 
 # loop syntax
   They are 3 types of loops are avilable.they are
