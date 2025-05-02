@@ -44,7 +44,7 @@ resource "aws_security_group" "securitygroup_creation" {
 
 # refer 1 resource into another resource syntax in below:-
 
-        type_of_resource.name_of_resource.
+        type_of_resource.name_of_resource.value
 
         ex:- aws_security_group.securitygroup_creation.id
 
@@ -58,3 +58,6 @@ variable "variable name"{
 # condition syntax
 
   expression ? " this runs if true " : " this runs if false"
+    # ex:- var.environment == "prod" ? "t2.micro" :"t3.small" 
+
+# loop syntax
