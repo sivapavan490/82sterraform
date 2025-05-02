@@ -48,3 +48,13 @@ resource "aws_security_group" "securitygroup_creation" {
 
         ex:- aws_security_group.securitygroup_creation.id
 
+
+# variable syntax
+
+variable "variable name"{
+    "required parameters"
+}
+
+# condition syntax
+
+  expression ? " this runs if true " : " this runs if false"
