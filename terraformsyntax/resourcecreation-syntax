@@ -61,3 +61,18 @@ variable "variable name"{
     # ex:- var.environment == "prod" ? "t2.micro" :"t3.small" 
 
 # loop syntax
+  They are 3 types of loops are avilable.they are
+
+       1) count-based loop
+       2) for -each loop
+       3) dynamic cidr_blocks
+
+
+count-based loop:-
+
+* mainly count based loops are used to create multiple single resources at a time. count based loop helps to reduce the code.
+Example for count-based lopp and count index visit the blow github link
+
+```
+https://github.com/sivapavan490/82sterraform/tree/ad438d284aa70a6013b4366db8c9e906068b875c/loops/count-loop
+```

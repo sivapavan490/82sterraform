@@ -32,4 +32,3 @@ resource "aws_security_group" "securitygroup_creation" {
   tags = var.sg_tags
 }
 
-d
