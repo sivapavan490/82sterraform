@@ -24,7 +24,7 @@ variable "from_port" {
 
 variable "to_port" {
   type = number
-  default = 22
+  #default = 22 it will ask by value in cmd prompt
 }
 
 variable "cidr_blocks" {
