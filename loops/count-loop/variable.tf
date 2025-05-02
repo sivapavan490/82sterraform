@@ -36,3 +36,11 @@ variable "sg_tags" {
   }
 
 }
+
+variable "zone_id"{
+  default = " " # hosted zone id in route53
+}
+
+variable "domain_name" {
+    default = "daws82s.online"
+}
