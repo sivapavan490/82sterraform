@@ -1,22 +1,25 @@
 
-resource "aws_instance" "backend" {
-  ami                    = var.ami_id
-  instance_type          = var.environment == "prod" ? "t3.small" :"t2.micro"
-  # condition syntax:-  expression ? " this runs if true " : " this runs if false"
+resource "aws_instance" "web" {
+  ami                    = data.aws_ami.joindeevops.id 
+  # we are gettng ami_id dynamiclly by using data-sources
+  instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.securitygroup_creation.id] # refering security group resource into instance resource
 
-  tags = var.tags
+  tags = {
+    Name = "HelloWorld"
+  }
 }
 
 
+
 resource "aws_security_group" "securitygroup_creation" {
-  name        = "backend" # security group name
+  name        = "siva" # security group name
   description = "Allow TLS inbound traffic and all outbound traffic"
   ingress {
-    from_port   = var.from_port
-    to_port     = var.to_port
+    from_port   = 22
+    to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = var.cidr_blocks
+    cidr_blocks = ["0.0.0.0/0"]
 
   }
   egress {
@@ -26,6 +29,9 @@ resource "aws_security_group" "securitygroup_creation" {
     cidr_blocks = ["0.0.0.0/0"]
 
   }
-  tags = var.sg_tags
+  tags = {
+    Name = "pavan" # name
+
+  }
 }
 

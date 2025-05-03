@@ -81,3 +81,9 @@ Example for count-based lopp and count index visit the blow github link
 ```
 https://github.com/sivapavan490/82sterraform/tree/ad438d284aa70a6013b4366db8c9e906068b875c/loops/count-loop
 ```
+
+# data source -syntax
+
+  data "type-of-resource" "name-of-resource"{
+     
+  }
